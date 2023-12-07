@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta tags for character set, viewport, and description -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>PhFree</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <!-- Preconnecting to external sources -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Linking to Google Fonts - Nabla font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+
+        <!-- Internal CSS styles -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+        <style>
+            .justify-text-50 {
+                text-align: center;
+                text-justify: inter-word;
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            .form-group {
+                margin: auto;
+                width: 50%
+            }
+
+            .navbar-brand {
+                font-family: 'Nabla', sans-serif;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <!-- Navbar content -->
+            <div class="container">
+                <a class="navbar-brand" href="/">PhFree</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/contact">Contact</a></li>
+                        <li class="nav-item dropdown">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page content-->
+        <div class="container text-center mt-5">
+            <!-- Main heading and introductory paragraphs -->
+            <h1>Everything you wanted to know about ... anything</h1>
+            <p class="lead">It’s 2023. You shouldn’t be paying for a PhD.</p>
+
+            <!-- Introduction to contact form -->
+            <p><b>Any questions? 🤔</b></p>
+
+            <div class="justify-text-50 mx-auto">
+                Contact us using the form below.
+            </div>
+
+            <!-- Contact form -->
+            <form method="post" action="/php/send_email.php">
+                <!-- Name input field -->
+                <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" name="name" placeholder="Name">
+                </div>
+
+                <!-- Email input field -->
+                <div class="form-group">
+                    <label for="formGroupExampleInput2"></label>
+                    <input type="email" class="form-control" id="formGroupExampleInput2" name="email" placeholder="Email">
+                </div>
+
+                <!-- Message text -->
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="message" placeholder="Message" rows="3"></textarea>
+                </div>
+
+                <br>
+
+                <!-- Submit button -->
+                <input type="submit" class="btn btn-primary" value="Submit">
+
+            </form>
+
+            <!-- Footer section -->
+            <div class="container">
+                <footer class="py-3 my-4">
+                    <p class="text-center text-muted">© 2023 Elissa Day and Asker Kurt-Elli </p>
+                </footer>
+
+                <!-- Bootstrap core JS-->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+                <!-- Core theme JS-->
+                <script src="js/scripts.js"></script>
+            </body>
+
+        </html>

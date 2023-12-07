@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta tags for character set, viewport, and description -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        <!-- Title of the webpage -->
+        <title>PhFree</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <!-- Preconnecting to external sources -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Linking to Google Fonts - Nabla font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+
+        <!-- Internal CSS styles -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <style>
+            .same-height-images img {
+                height: 300px;
+                width: auto;
+                display: block;
+                margin: auto;
+            }
+
+            .justify-text-50 {
+                text-align: left;
+                text-justify: inter-word;
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            .navbar-brand {
+                font-family: 'Nabla', sans-serif;
+            }
+
+            .accordion-body {
+                text-align: left;
+            }
+
+
+            .nabla-font {
+                font-family: 'Nabla', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <!-- Navbar content -->
+            <div class="container">
+                <a class="navbar-brand" href="/">PhFree</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                        <li class="nav-item dropdown">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page content-->
+        <div class="container text-center mt-5">
+            <!-- Main heading and introductory paragraphs -->
+            <h1>Everything you wanted to know about <span class="nabla-font">PhFree</span></h1>
+            <p class="lead">It’s 2023. You shouldn’t be paying for a PhD.</p>
+
+            <!-- Introduction to FAQs -->
+            <p>We've answered some FAQs below. If you have any more questions (and we
+                don't blame you if you do), contact us <a href="/contact.html">here</a>.
+            </p>
+
+            <!-- Accordion for FAQ items -->
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            What’s the big deal? 🤔
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The aim of this website is to provide a comprehensive and searchable database for PhD opportunities in the UK.
+                            <br>
+                            <br>
+                            In the UK, you can apply for 2 kinds of PhD programme.
+                            Firstly, you can come up with your own project, then apply for external funding
+                            from a regional body, or special fund. Unfortunately, not a lot of students get funding this way.
+                            Secondly, you can apply for a ‘studentship’, where a professor has proposed and
+                            (should have) funded a project. The problem is, not all of these projects are funded,
+                            and if you are trying to transition between subject area, it’s difficult to know where to look.
+                            <br>
+                            <br>
+                            Right now, <a href="https://findaphd.com">findaphd</a> is the most comprehensive site to find
+                            these PhD studentships.
+                            Unfortunately, many of these are unfunded, and there’s no way to view PhD projects without multiple
+                            ads or selecting a specific subject area first. Maybe you’ve done a BA in Economics, so you’re
+                            looking for PhDs in that area. However, your dream project is actually in the Agriculture
+                            department, but you’re never going to find it because you aren’t going to click on the
+                            Agriculture page of the site.
+                            <br>
+                            <br>
+                            We want to raise awareness of the cool projects on offer at so many
+                            fantastic institutions, which all pay the UK <a href="https://www.ukri.org/what-we-do/developing-people-and-skills/find-studentships-and-doctoral-training/changes-to-the-minimum-stipend-from-1-october-2023/">PhD stipend</a>,
+                            and almost always pay all of your tuition fees (the caveat is that some institutions cap the number
+                            of international students whose fees they cover, but this information will always be listed in the
+                            PhD advertisement).
+                            <br>
+                            <br>
+                            PhFree simplifies this journey, by returning search results linked to keywords in the
+                            titles of PhD projects. We are ad-free and our data is constantly updated through the
+                            findaphd database. The difference is, we remove any PhDs that aren’t funded, because <u>you deserve
+                                to be paid for your research</u>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How do I use this website? 🔍
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            We regularly scrape the findaphd database to find the latest opportunities, and compile
+                            them here. All you have to do is enter a search term, like 'dogs' or 'education', to find
+                            PhD projects related to your interests. You will be advised of the closing date for
+                            applications (where applicable) and can click the link for more details and to apply for the PhD.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Why should I go to the UK for a PhD? ☕
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            UK PhD <i>projects</i> are structured differently to the US. We don't do coursework, although
+                            you are usually welcome to sit in on classes (not for credit) during your PhD studies.
+                            UK PhDs tend to last 3 to 4 years, so they're much shorter than their US counterparts.
+                            You dive
+                            straight into exploring a PhD project which has been created and advertised by a supervisory
+                            team. These are the ones we have compiled on PhFree. Of course, you still shape your research,
+                            but you enter your PhD programme with a more defined scope for this.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Can you explain the UK education system to me? 💷
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Oh yeah, that's our bad. In the UK, you finish your final two years of high school (called 6th Form or college),
+                            then go on to university (if you want to)! You can get a BA (same thing) or BSc (BS in the US) in 3 years. Then,
+                            if you want to master your subject (see what we did there), you can get an MA, MSc, MPhil (Master of Philosophy),
+                            MRes (Master of Research), MSt (Master of Studies), etc, etc - you get the drill. Each university offers their
+                            own thing but they're all fairly comparable. There's even super specific ones like the MEarthSci (Master of
+                            Earth Sciences). Yeah. We're complicated. Sorry about that.
+                            <br>
+                            <br>
+                            Then what, we hear you say? Still haven't satisfied your academic cravings? Time to get that doctorate!
+                            Thankfully, the lingo goes back to normal and they're all called PhDs (except when they're DPhils at Oxford).
+                            <br>
+                            <br>
+                            Still listening? Want to do a PhD in the UK? There's 2 ways of going about it. Firstly, you can get in touch
+                            with a potential supervisor (UK PhDs usually require a primary and secondary supervisor, but you can figure
+                            that one out down the line). You can propose your project, apply, and get an offer. The problem? You don't have
+                            any funding - yet. Your options are now to secure a scholarship from your university, from an external body
+                            (for US citizens, this could be something like Fulbright), or apply to a Research Council!
+                            <br>
+                            <br>
+                            The Research Council route is tricky yet rewarding. You have to win funding by beating out other applicants
+                            in your subject area, but you're competing against entire regions. For example, there's the techne group,
+                            'the craft of research in the arts and humanities', where you'd compete against students applying to any
+                            one of 13 universities in the group, for arts and humanities PhDs. This is less intimidating than it sounds;
+                            people at all universities get funding every year, and if you work with your supervisor to put in a strong
+                            application, you have the best possible chance. This will pay for your course fees (although check if it
+                            will cover all of them if you're an international student) and a living stipend for 3 to 4 years.
+                            <br>
+                            <br>
+                            Secondly, if you aren't as keen about coming up with your own project, you can apply to what are called DTPs
+                            (Doctoral Training Partnerships). These are organised regionally (mostly) and by subject. Bear with us as we
+                            walk through an example.
+                            <br>
+                            <br>
+                            Say you want to study something ~fishy~. Literally. About fish. Well, there's the
+                            Centre for Doctoral Training in Sustainable Management of UK Marine Resources (handily abbreviated to CDT
+                            SuMMeR)! They advertise projects relating to anything marine, which often includes fish. The projects have
+                            already been funded and laid out (to an extent) by the supervisor you'd work with, so, if you apply and are
+                            successful, your PhD scope is a bit more fixed - of course, there's some flexibility, but the name of the
+                            project and your goals will be laid out by your supervisor, or third-party organisations who sometimes
+                            put money towards these. If you're successful, you're guaranteed funding.
+                            <br>
+                            <br>
+                            These are the 2 main routes to a PhD in the UK. To make things simpler, we're only advertising the second
+                            type, because, as much as we think that coming up with your own project is extremely cool, we want to draw
+                            your attention to PhDs where you are <u>guaranteed</u> funding from the beginning.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5th Accordion Item -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            What on earth are all of these terms? 🤓
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            You're right, this is a lot to take in, especially if you aren't used to the UK education system. So, here we go:
+
+                            <br>
+                            <br>
+
+                            DTP? That's a <b>Doctoral Training Partnership</b>. You can find out more <a href="https://www.ukri.org/what-we-do/developing-people-and-skills/esrc/doctoral-training-partnerships/">here</a>.
+                            <br>
+                            <br>
+                            CDT? This one's a <b>Centre for Doctoral Training</b>. It's explained in more detail <a href="https://www.ukri.org/what-we-do/developing-people-and-skills/nerc/nerc-studentships/directed-training/centres-for-doctoral-training-cdt/">here</a>.
+                            <br>
+                            <br>
+                            Research Councils? All major UK Research Councils are under the <b>UKRI</b>. Here's a short breakdown:
+                            <br>
+                            <br>
+                            <a href="https://www.ukri.org/what-we-do/developing-people-and-skills/find-studentships-and-doctoral-training/get-a-studentship-to-fund-your-doctorate/">UK Research and Innovation</a> (UKRI):
+                            The UKRI funds doctoral research across various disciplines through its various councils, including:
+                            <br>
+                            <br>
+                            <li>EPSRC (Engineering and Physical Sciences Research Council): Funds research in engineering and physical sciences.</li>
+                            <li>AHRC (Arts and Humanities Research Council): Focuses on arts and humanities disciplines.</li>
+                            <li>ESRC (Economic and Social Research Council): Funds research in social sciences.</li>
+                            <li>BBSRC (Biotechnology and Biological Sciences Research Council): Supports research in biological sciences.</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer section -->
+        <div class="container">
+            <footer class="py-3 my-4">
+                <p class="text-center text-muted">© 2023 Elissa Day and Asker Kurt-Elli </p>
+            </footer>
+
+            <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="js/scripts.js"></script>
+        </body>
+
+    </html>

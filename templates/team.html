@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>PhFree</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <style>
+            img {
+                height: 200px;
+                width: auto;
+                display: block;
+                margin: auto;
+            }
+
+            .justify-text-50 {
+                text-align: center;
+                text-justify: inter-word;
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            .navbar-brand {
+                font-family: 'Nabla', sans-serif;
+            }
+
+            .col {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+                text-align: justify;
+
+            }
+
+            .col>* {
+                flex-grow: 1;
+
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">PhFree</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                        <li class="nav-item dropdown">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page content-->
+        <div class="container text-center mt-5">
+            <h1>Everything you wanted to know about us</h1>
+            <p class="lead">It’s 2023. You shouldn’t be paying for a PhD.</p>
+
+
+            <p><b>Who are we? 🤓</b></p>
+
+            <div class="justify-text-50 mx-auto">
+                We are Elissa Day and Asker Kurt-Elli, two graduate students at Harvard University from the UK and Ireland.
+            </div>
+
+            <br>
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col">
+
+                        <img src="{{ url_for('static', filename='images/emtd.jpg') }}" alt="Elissa Day">
+
+                        <br>
+
+                        Elissa is a PhD student in Harvard University’s Near Eastern Languages and Cultures (Egyptology)
+                        programme. 📜 She obtained her BA in Egyptology from the
+                        University of Liverpool, where she also worked for the Careers and
+                        Employability department. She then studied at Selwyn College, Cambridge, and Indiana University,
+                        where she taught Egyptian hieroglyphs.
+                        Elissa is passionate about diversity and inclusion, in particular,
+                        access to postgraduate education. 🏫 In her spare time, she likes to play baseball, write, and be
+                        continually disappointed in her fantasy football team. 🏈
+
+                    </div>
+
+                    <div class="col">
+
+                        <img src="{{ url_for('static', filename='images/ake.jpg') }}" alt="Asker Kurt-Elli">
+
+                        <br>
+
+                        Asker is the Michael von Clemm Fellow at Harvard University and a research assistant at the Berkman Klein
+                        Center for Internet and Society. 💻 He did his BA in Music at Magdalen College, Oxford where he received the
+                        Gibbs Prize, before completing an MPhil in Digital Humanities at Trinity Hall, Cambridge. 🎶 As someone
+                        going through the PhD application process currently, he has a vested interest in this project! Outside of
+                        academia, he is a keen musician, climber, surfer, and cook of vegan takes on traditional Cypriot
+                        and Mauritian dishes. 🍲
+
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="container">
+                    <footer class="py-3 my-4">
+                        <p class="text-center text-muted">© 2023 Elissa Day and Asker Kurt-Elli </p>
+                    </footer>
+
+
+                    <!-- Bootstrap core JS-->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+                    <!-- Core theme JS-->
+                    <script src="js/scripts.js"></script>
+                </body>
+
+            </html>
